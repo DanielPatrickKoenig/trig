@@ -1,0 +1,11 @@
+{
+  "name": "trig",
+  "version": "1.0.0",
+  "description": "trig makes provides easy to use methods for ding trigonomatry calculations.",
+  "main": "trig.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dan Koenig <dpkoenig27@gmail.com>",
+  "license": "MIT"
+}

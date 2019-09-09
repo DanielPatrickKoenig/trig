@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script src="dist/trig.min.js"></script>
+
+        
+    </head>
+    <body>
+        <svg>
+            <path d="M 0 0 L 1 0 L 0 1 Z" fill="transparent" stroke="#000000" stroke-width="1"></path>
+            <circle cx="10" cy="10" r="2">
+                
+            </circle>
+        </svg>
+        <script>
+            var pathPoints = [
+                {x: 90, y: 22},
+                {x: 50, y: 122},
+                {x: 10, y: 66}
+            ];
+            var circlePoint = {x: 40, y: 70};
+            var pathString = '';
+            for(var i = 0; i < pathPoints.length; i++) {
+                var prefix = i == 0 ? 'M ' : ' L ';
+                pathString += prefix + pathPoints[i].x + ' ' + pathPoints[i].y;
+            }
+            pathString += ' Z';
+            document.querySelector('path').setAttribute('d', pathString);
+            document.querySelector('circle').setAttribute('cx', circlePoint.x);
+            document.querySelector('circle').setAttribute('cy', circlePoint.y);
+        </script>
+    </body>
+</html>
