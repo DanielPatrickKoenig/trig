@@ -1,4 +1,4 @@
-var trig;
+var jstrig;
 (function () {
   class Trig{
 
@@ -38,10 +38,10 @@ var trig;
   
       let resultVal;
       if (orbitType == this.OrbitType.COS) {
-          resultVal = _center + (Math.cos(this.degreesToRadians(_angle)) * _radius);
+          resultVal = _center + (Math.cos(this.degreesToRadians(_angle-90)) * _radius);
       }
       if (orbitType == this.OrbitType.SIN) {
-          resultVal = _center + (Math.sin(this.degreesToRadians(_angle)) * _radius);
+          resultVal = _center + (Math.sin(this.degreesToRadians(_angle-90)) * _radius);
       }
       return resultVal;
     }
@@ -97,6 +97,6 @@ var trig;
       return inside;
     }
   }
-  trig = new Trig();
+  jstrig = new Trig();
 })();
-export default trig;
+export default jstrig;

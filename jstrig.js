@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-var trig;
+var jstrig;
 (function () {
     var Trig = /** @class */ (function () {
         function Trig() {
@@ -37,10 +37,10 @@ var trig;
         Trig.prototype.orbit = function (_center, _radius, _angle, orbitType) {
             var resultVal;
             if (orbitType == this.OrbitType.COS) {
-                resultVal = _center + (Math.cos(this.degreesToRadians(_angle)) * _radius);
+                resultVal = _center + (Math.cos(this.degreesToRadians(_angle - 90)) * _radius);
             }
             if (orbitType == this.OrbitType.SIN) {
-                resultVal = _center + (Math.sin(this.degreesToRadians(_angle)) * _radius);
+                resultVal = _center + (Math.sin(this.degreesToRadians(_angle - 90)) * _radius);
             }
             return resultVal;
         };
@@ -86,6 +86,6 @@ var trig;
         };
         return Trig;
     }());
-    trig = new Trig();
+    jstrig = new Trig();
 })();
-exports["default"] = trig;
+exports["default"] = jstrig;
